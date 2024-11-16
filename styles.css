@@ -1,0 +1,150 @@
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #d3e0d67c ;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4e6f5d, #6b8b72, #4e6f5d);
+  color: white;
+  position: relative;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 3em;
+  animation: fadeIn 2s ease-in;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  animation: fadeIn 3s ease-in;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #4e6f5d, #6b8b72, #4e6f5d);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+
+  text-decoration: underline;
+}
+.professional a {
+  text-decoration: none;
+  color: black;
+}
+/* Estilos das seções */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about, .professionals, .services, .contact {
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about.active, .professionals.active, .services.active, .parcerias.active, .contact.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about {
+  background: #ffffff ;
+  color: #333;
+}
+
+#professionals, #services, #contact {
+  background: #ffffff;
+}
+
+.professional, .service {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.professional:hover, .service:hover {
+  transform: scale(1.05);
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  max-width: 200px;
+  transition: transform 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.contact-info a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+.parcerias>picture{
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 150px;
+  margin: 20px auto;
+  margin-bottom: 60px;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-info .facebook { background-color: #3b5998; }
+.contact-info .instagram { background-color: #e4405f; }
+.contact-info .whatsapp { background-color: #25d366; }
+
+.contact-info a:hover {
+  opacity: 0.8;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
